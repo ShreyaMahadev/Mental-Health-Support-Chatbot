@@ -176,12 +176,12 @@ if submit_button and user_message:
     st.session_state['messages'].append(("Bot", response))
     st.session_state['mood_tracker'].append((user_message, sentiment, polarity))
 
-# Display chat messages with colored containers and emojis
-for sender, message in st.session_state['messages']:
-    if sender == "You":
-        st.markdown(f"<div class='user-msg'>🧑‍💻 <b>You:</b> {message}</div>", unsafe_allow_html=True)
-    else:
-        st.markdown(f"<div class='bot-msg'>🤖 <b>Bot:</b> {message}</div>", unsafe_allow_html=True)
+
+if st.session_state['mood_tracker']:
+    last_message, last_sentiment, last_polarity = st.session_state['mood_tracker'][-1]
+    st.markdown(f"<div class='user-msg'>🧑‍💻 <b>Your input:</b> {last_message}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='sentiment-box'>📝 <b>Your current sentiment:</b> {last_sentiment}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='coping-box'>🛠️ <b>Suggested Coping Strategy:</b> {provide_coping_strategy(last_sentiment)}</div>", unsafe_allow_html=True)
 
 # Display sentiment and coping strategy in styled boxes
 if st.session_state['mood_tracker']:

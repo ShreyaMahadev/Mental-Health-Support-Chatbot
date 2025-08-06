@@ -77,14 +77,6 @@ This project is licensed under the MIT License.
 ## 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-
-## 🙏 Acknowledgements
-- [OpenAI](https://openai.com/)
-- [Streamlit](https://streamlit.io/)
-- [TextBlob](https://textblob.readthedocs.io/en/dev/)
-- [MentalHealth.gov](https://www.mentalhealth.gov/)
-
-
 ---
 
 *🤖 This chatbot is for informational and supportive purposes only. For professional help, please consult a licensed mental health provider.*
