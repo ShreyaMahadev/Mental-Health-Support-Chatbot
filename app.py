@@ -183,12 +183,6 @@ if st.session_state['mood_tracker']:
     st.markdown(f"<div class='sentiment-box'>📝 <b>Your current sentiment:</b> {last_sentiment}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='coping-box'>🛠️ <b>Suggested Coping Strategy:</b> {provide_coping_strategy(last_sentiment)}</div>", unsafe_allow_html=True)
 
-# Display sentiment and coping strategy in styled boxes
-if st.session_state['mood_tracker']:
-    last_message, last_sentiment, last_polarity = st.session_state['mood_tracker'][-1]
-    st.markdown(f"<div class='sentiment-box'>📝 <b>Your current sentiment:</b> {last_sentiment}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='coping-box'>🛠️ <b>Suggested Coping Strategy:</b> {provide_coping_strategy(last_sentiment)}</div>", unsafe_allow_html=True)
-
 # Display resources in main area
 st.markdown("<div class='resources-box'><b>🌟 Resources</b><br>"
             "If you need immediate help, please contact one of the following resources:<br>"
